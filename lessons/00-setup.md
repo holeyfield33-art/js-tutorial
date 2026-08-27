@@ -89,6 +89,32 @@ If that worked — congratulations. Your environment is ready.
 
 ---
 
+## The Big Picture
+
+The same `hello.js` file can run in two different places — a terminal via Node.js, or a browser's console — and either path prints the same output. In words: `hello.js` feeds into either Node.js (`node hello.js`, in a terminal) or a browser engine (typed into DevTools' Console tab); both print `"Setup successful!"`.
+
+```text
+                      ┌────────────────────┐
+                      │      Node.js       │
+                      │   node hello.js    │
+                 ┌───▶│     (terminal)     │────┐
+                 │    └────────────────────┘    │
+                 │                              │
+┌────────────┐   │                              │   ┌────────────────────┐
+│  hello.js  │───┤                              ├──▶│       Output       │
+│  (source)  │   │                              │   │"Setup successful!" │
+└────────────┘   │                              │   └────────────────────┘
+                 │                              │
+                 │    ┌────────────────────┐    │
+                 │    │   Browser engine   │    │
+                 └───▶│  DevTools console  │────┘
+                      └────────────────────┘
+```
+
+<img src="../assets/diagrams/lesson-00-runtime-overview.svg" alt="Diagram: hello.js source file feeding into either Node.js (run via node hello.js in a terminal) or a browser's DevTools console, both producing the same &quot;Setup successful!&quot; output" width="700">
+
+---
+
 ## Common Problems
 
 | Problem                        | Fix                                      |

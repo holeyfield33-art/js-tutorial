@@ -82,13 +82,30 @@ This repository teaches JavaScript the way it is actually used today:
 ```
 js-tutorial/
 ├── README.md                 ← you are here
+├── LICENSE
+├── .devcontainer/             ← Codespaces/VS Code container, zero manual setup
+├── .vscode/                   ← debugger (F5) + format-on-save config
+├── package.json               ← npm scripts: lint, test, format
+├── eslint.config.js
+├── .prettierrc
 ├── lessons/
 │   ├── 00-setup.md
 │   ├── 01-hello-world.md
 │   └── ...
-├── exercises/                ← solutions will appear later
+├── examples/                  ← runnable code for each lesson (node examples/lesson-0X-*.js)
+├── tests/                     ← node:test files, one per lesson
+├── exercises/                 ← solutions will appear later
 ├── projects/
-└── assets/                   ← diagrams, images (future)
+└── assets/diagrams/           ← SVG diagrams (each lesson also has an ASCII fallback inline)
+```
+
+**Try it now:**
+
+```bash
+npm install     # one-time setup (also runs automatically in Codespaces)
+npm test        # runs every lesson's tests
+npm run lint    # checks code style
+node examples/lesson-01-hello-world.js
 ```
 
 ---

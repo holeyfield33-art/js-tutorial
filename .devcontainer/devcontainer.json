@@ -1,0 +1,24 @@
+{
+  "name": "JavaScript Tutorial",
+
+  // Pinned to a specific Node LTS major version (not "latest") so every
+  // learner and CI run gets the exact same runtime this course was written
+  // and tested against — "latest" would silently change under us and could
+  // break examples without any change to this repo.
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+
+  "customizations": {
+    "vscode": {
+      // Installed automatically so "modern practice" (Lesson 00's promise)
+      // is true on first launch, not something the learner has to remember
+      // to click-install themselves.
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  },
+
+  // Runs once after the container is created: installs the dependencies
+  // declared in package.json (ESLint, Prettier) so `npm test` / `npm run
+  // lint` work immediately with zero manual setup, satisfying the
+  // "Codespace launch needs zero manual setup" acceptance bar.
+  "postCreateCommand": "npm install"
+}

@@ -1,0 +1,11 @@
+# Installed by `npm install` — reproducible from package.json/package-lock.json,
+# and large enough that committing it would bloat every clone of this repo.
+node_modules/
+
+# npm's own diagnostic output on install failures — local-machine debugging
+# noise, not something future clones need.
+npm-debug.log*
+
+# Common OS/editor cruft that has nothing to do with the tutorial content.
+.DS_Store
+*.log

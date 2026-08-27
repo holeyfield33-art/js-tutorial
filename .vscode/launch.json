@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug active JS file",
+      // Node's built-in debugger — no external binary to install or configure
+      // (unlike gdb on the companion C++ repo). VS Code talks to it directly
+      // over the Node inspector protocol.
+      "type": "node",
+      "request": "launch",
+      // Runs whichever file is focused in the editor, so this one
+      // configuration works for every lesson/example without edits.
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      // Node's stack traces point straight at your source instead of at
+      // generated/transpiled code — there is no build step in this course.
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

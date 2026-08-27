@@ -1,0 +1,17 @@
+{
+  "name": "js-tutorial",
+  "version": "1.0.0",
+  "description": "A clean, progressive, beginner-to-intermediate JavaScript tutorial series",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^10.9.1",
+    "prettier": "^3.9.6"
+  },
+  "license": "MIT"
+}

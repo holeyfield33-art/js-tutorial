@@ -31,6 +31,19 @@ That’s it. No main function required. No includes. No return code. JavaScript 
 
 ## Line-by-Line Breakdown
 
+Here's the whole statement broken into its parts, before we go through each one in prose:
+
+```text
+console.log("Hello, World!");
+└──┬──┘└┬─┘└───────┬───────┘│
+   │    │          │        └─ ends the statement (ASI can infer it)
+   │    │          └─ a string literal — the argument passed to .log()
+   │    └─ a method — a function that belongs to console
+   └─ built-in object, available in both browsers and Node.js
+```
+
+<img src="../assets/diagrams/lesson-01-console-log-breakdown.svg" alt="Diagram: console.log(&quot;Hello, World!&quot;); annotated part by part — console is a built-in object, .log is a method belonging to it, &quot;Hello, World!&quot; is the string literal argument, and the semicolon ends the statement — with an arrow showing the statement running to print Hello, World! in the terminal" width="760">
+
 ### `console.log(...)`
 
 `console` is a built-in object available in both browsers and Node.js.  

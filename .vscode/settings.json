@@ -1,0 +1,19 @@
+{
+  // Formats on every save so the "modern practice from day one" promise in
+  // the README is something the editor enforces, not just a claim in prose.
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Scope Prettier as the JS formatter explicitly — otherwise a differently
+  // configured global default formatter could silently take over.
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ESLint's fixable rules (unused vars, etc.) are applied alongside the
+  // Prettier formatting pass, so save-time cleanup covers both style and
+  // a subset of correctness issues.
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
