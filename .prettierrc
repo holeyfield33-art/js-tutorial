@@ -1,0 +1,18 @@
+# .prettierrc is parsed as YAML by Prettier's config loader, which is why
+# comments are allowed here (plain JSON would reject them) — used so the
+# reasoning for each setting lives next to the setting itself.
+
+# Lesson 01 explicitly recommends the semicolon even though JavaScript's
+# Automatic Semicolon Insertion makes it optional — matches "the style of
+# most professional codebases" the lesson teaches.
+semi: true
+
+# Lesson 01 says "we'll use double quotes by default in early lessons" —
+# Prettier's own default is also double quotes, so this just pins that
+# choice explicitly instead of relying on an implicit default.
+singleQuote: false
+
+# ES5-safe trailing commas (arrays/objects, not function params) — reduces
+# noisy diffs when a new item is added to a list, without requiring the
+# newer trailing-comma-in-function-calls syntax before it's been taught.
+trailingComma: "es5"
